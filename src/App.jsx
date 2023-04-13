@@ -20,7 +20,7 @@ function App() {
   const handleIncrease = () => {
     //With these lines of codes bellow we can follow or get real number of likes from visitors.
     countapi.visits("start").then((result) => {
-      console.log(result.value); //Check if the result works as intended.
+      // console.log(result.value); //Check if the result works as intended.
       setCount(result.value);
     });
     // setCount((count) => count + 1);
@@ -31,7 +31,7 @@ function App() {
   useEffect(() => {
     //With lines of codes we can see real visitor number per visit or page refresh.
     countapi.visits("new").then((result) => {
-      console.log(result.value); //Check if the result works as intended.
+      // console.log(result.value); //Check if the result works as intended.
       setVisit(result.value);
     });
   }, []);
@@ -43,7 +43,6 @@ function App() {
           setWeather(data);
         }
       );
-      console.log(data);
     };
     fetchWeather();
   }, [query, units]);
